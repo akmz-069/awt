@@ -11,7 +11,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background: #343434;
       margin: 0;
       display: flex;
       justify-content: center;
@@ -20,7 +20,7 @@
     }
 
     .calculator {
-      background: #fff;
+      background: #575656;
       border-radius: 16px;
       padding: 20px;
       width: 320px;
@@ -63,7 +63,6 @@
     button.equal {
       background: #2ecc71;
       color: white;
-      grid-column: span 2;
     }
 
     button.clear {
@@ -109,6 +108,7 @@
 
       <button onclick="appendValue('0')">0</button>
       <button onclick="appendValue('.')">.</button>
+      <button onclick="deleteLast()">⌫</button>
       <button class="equal" onclick="calculateResult()">=</button>
     </div>
   </div>
