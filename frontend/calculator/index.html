@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Calculator</title>
+  <title>Calculator</title>
   <style>
     * {
       box-sizing: border-box;
@@ -11,7 +11,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #343434;
+      background: #e9e4e4;
       margin: 0;
       display: flex;
       justify-content: center;
@@ -20,7 +20,7 @@
     }
 
     .calculator {
-      background: #575656;
+      background: white;
       border-radius: 16px;
       padding: 20px;
       width: 320px;
@@ -30,8 +30,8 @@
     .display {
       width: 100%;
       height: 60px;
-      background: #222;
-      color: #0f0;
+      background: #353434;
+      color: rgb(228, 233, 228);
       font-size: 2rem;
       text-align: right;
       padding: 10px;
@@ -47,26 +47,35 @@
     }
 
     button {
-      padding: 20px;
+      padding: 18px;
       font-size: 1.2rem;
       border: none;
-      border-radius: 12px;
+      border-radius: 50%;
       cursor: pointer;
       transition: background 0.2s ease;
     }
 
     button.operator {
-      background: #f39c12;
+      background: #e06c0d;
       color: white;
     }
 
     button.equal {
-      background: #2ecc71;
+      background: #e06c0d;
+      
       color: white;
     }
 
     button.clear {
-      background: #e74c3c;
+      background: #7c7979;
+      color: white;
+    }
+    button.brackets {
+      background: #7c7979;
+      color: white;
+    }
+    button.normal_button {
+      background: #3b3b3b;
       color: white;
     }
 
@@ -87,28 +96,28 @@
     <div class="display" id="display">0</div>
     <div class="buttons">
       <button class="clear" onclick="clearDisplay()">C</button>
-      <button onclick="appendValue('(')">(</button>
-      <button onclick="appendValue(')')">)</button>
+      <button class="brackets"onclick="appendValue('(')">(</button>
+      <button class="brackets"onclick="appendValue(')')">)</button>
       <button class="operator" onclick="appendValue('/')">÷</button>
 
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
+      <button class="normal_button"onclick="appendValue('7')">7</button>
+      <button class="normal_button"onclick="appendValue('8')">8</button>
+      <button class="normal_button"onclick="appendValue('9')">9</button>
       <button class="operator" onclick="appendValue('*')">×</button>
 
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
+      <button class="normal_button"onclick="appendValue('4')">4</button>
+      <button class="normal_button"onclick="appendValue('5')">5</button>
+      <button class="normal_button"onclick="appendValue('6')">6</button>
       <button class="operator" onclick="appendValue('-')">−</button>
 
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
+      <button class="normal_button"onclick="appendValue('1')">1</button>
+      <button class="normal_button"onclick="appendValue('2')">2</button>
+      <button class="normal_button"onclick="appendValue('3')">3</button>
       <button class="operator" onclick="appendValue('+')">+</button>
 
-      <button onclick="appendValue('0')">0</button>
-      <button onclick="appendValue('.')">.</button>
-      <button onclick="deleteLast()">⌫</button>
+      <button class="normal_button"onclick="appendValue('0')">0</button>
+      <button class="normal_button"onclick="appendValue('.')">.</button>
+      <button class="normal_button"onclick="deleteLast()">⌫</button>
       <button class="equal" onclick="calculateResult()">=</button>
     </div>
   </div>
