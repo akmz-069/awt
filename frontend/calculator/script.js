@@ -12,6 +12,15 @@ function clearDisplay() {
   display.innerText = "0";
 }
 
+function deleteLast() {
+  let current = display.innerText;
+  if (current.length > 1) {
+    display.innerText = current.slice(0, -1);
+  } else {
+    display.innerText = "0";
+  }
+}
+
 function calculateResult() {
   try {
     display.innerText = eval(display.innerText);
