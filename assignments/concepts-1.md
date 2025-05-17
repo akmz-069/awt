@@ -2,7 +2,7 @@
 
 ---
 
-##  HTTP Methods & HTTP Status Codes
+##  HTTP Methods & HTTP Status Codes : 
 
 ###  HTTP Methods
 
@@ -20,7 +20,7 @@
 
 ---
 
-##  CSS Selectors
+##  CSS Selectors : 
 
 Here are 4 commonly used CSS selectors:
 
@@ -105,6 +105,38 @@ console.log(double(5)); // 10
 
 ```
 
+## JavaScript Array Methods :
+
+<li> filter()- reutrns a new array with elements that match a condition </li>
+
+```javascript
+    const numbers = [1, 2, 3, 4];
+    const even_number = numbers.filter(n => n % 2 === 0); // [2, 4]
+```
+
+<li> map() – Transforms each element and returns a new array.</li>
+
+```javascript 
+    const nums = [1, 2, 3];
+    const squared_num = nums.map(n => n * n); // [1, 4, 9]
+```
+
+<li>forEach() – Executes a function on each array element.</li>
+
+```javascript
+    nums.forEach(n => console.log(n));
+```
+<li>push() – Adds an element to the end of the array.</li>
+
+```javascript
+    nums.push(4); // [1, 2, 3, 4]
+```
+
+<li>pop() – Removes the last element of the array.</li>
+
+```javascript
+    nums.pop(); // [1, 2, 3]
+```
 
 
 
